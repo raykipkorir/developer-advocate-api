@@ -51,7 +51,7 @@ def query_company(company: str, header: dict):
         )
         return instance
     except:
-        return []
+        return 
 
 #used initially to populate database
 def populate_database(url, payload, header):

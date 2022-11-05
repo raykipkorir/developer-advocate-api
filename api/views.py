@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404
+from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
@@ -7,6 +8,8 @@ from .models import Advocate, Company
 from .serializers import AdvocateSerializer, CompanySerializer
 from .twitter_api import main
 
+def routers(request):
+    return render(request, "api/home.html")
 
 class AdvocateListCreate(generics.ListCreateAPIView):
     serializer_class = AdvocateSerializer
