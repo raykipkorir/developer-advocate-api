@@ -1,0 +1,1 @@
+web: gunicorn bridger.wsgi --log-file -
